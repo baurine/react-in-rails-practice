@@ -2,7 +2,11 @@
   "name": "react-demo",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.4"
+    "@rails/webpacker": "3.4",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
