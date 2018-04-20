@@ -37,6 +37,6 @@ export default class MovieItem extends React.Component {
         </div>
       )
     }
-    return null
+    return <h1>I am loading... please don't leave me!</h1>
   }
 }
