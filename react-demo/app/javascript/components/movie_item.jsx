@@ -7,22 +7,23 @@ import PropTypes from 'prop-types'
 import ReactStars from 'react-stars'
 
 export default class MovieItem extends React.Component {
-  constructor(props) {
-    super(props)
+  // constructor(props) {
+  //   super(props)
 
-    this.state = {
-      movie: null
-    }
-  }
+  //   this.state = {
+  //     movie: null
+  //   }
+  // }
 
-  componentDidMount() {
-    fetch('/movies/1')
-      .then(res => res.json())
-      .then(movie => this.setState({movie}))
-  }
+  // don't need any more
+  // componentDidMount() {
+  //   fetch('/movies/1')
+  //     .then(res => res.json())
+  //     .then(movie => this.setState({movie}))
+  // }
 
   render() {
-    const { movie } = this.state
+    const { movie } = this.props
     if (movie) {
       return (
         <div className='movie-container'>
@@ -39,4 +40,8 @@ export default class MovieItem extends React.Component {
     }
     return <h1>I am loading... please don't leave me!</h1>
   }
+}
+
+MovieItem.propTypes = {
+  movie: PropTypes.object
 }

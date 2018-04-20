@@ -1,2 +1,3 @@
 
-<%= javascript_pack_tag 'app' %>
+<%= react_component('movie_item', {movie: @movie}, {prerender: true}) %>
+<%= javascript_pack_tag 'application' %>

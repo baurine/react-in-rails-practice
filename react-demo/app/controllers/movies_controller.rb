@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   end
 
   def csr
+    @movie = Movie.find 2
   end
 
   def show
