@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   end
 
   def csr
+    sleep 5
     @movie = Movie.find 2
   end
 
