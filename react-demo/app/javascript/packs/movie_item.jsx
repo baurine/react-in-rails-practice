@@ -4,6 +4,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import ReactStars from 'react-stars'
 
 export default class MovieItem extends React.Component {
   constructor(props) {
@@ -29,6 +30,9 @@ export default class MovieItem extends React.Component {
           <div className='movie-info'>
             <h1>{movie.title}</h1>
             <p>{movie.desc}</p>
+            <ReactStars count={5}
+                        size={48}
+                        color2={'#ffd700'} />
           </div>
         </div>
       )
