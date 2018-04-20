@@ -1,2 +1,7 @@
-<h1>Movies#ssr</h1>
-<p>Find me in app/views/movies/ssr.html.erb</p>
+<div class='movie-container'>
+  <img class='movie-cover' src=<%= @movie.cover_img %>>
+  <div class='movie-info'>
+    <h1><%= @movie.title%></h1>
+    <p><%= @movie.desc %></p>
+  </div>
+</div>
