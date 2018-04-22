@@ -93,17 +93,7 @@
 
       <body>
 
-    <div data-react-class="MovieItem" data-react-props="{&quot;movie&quot;:{&quot;id&quot;:1,&quot;cover_img&quot;:&quot;https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2516578307.webp&quot;,&quot;title&quot;:&quot;头号玩家 Ready Player One (2018)&quot;,&quot;desc&quot;:&quot;在2045年，现实世界衰退破败，人们沉迷于VR(虚拟现实)游戏“绿洲(OASIS)”的虚幻世界里寻求慰藉。马克·里朗斯饰演的“绿洲”的创始人临终前宣布，将亿万身家全部留给寻获他隐藏的彩蛋的游戏玩家，史上最大规模的寻宝冒险就此展开，由泰伊·谢里丹饰演的男主角韦德·沃兹(Wade Watts/Parzival)和数十亿竞争者踏上奇妙而又危机重重的旅途。&quot;,&quot;created_at&quot;:&quot;2018-04-20T14:05:25.829Z&quot;,&quot;updated_at&quot;:&quot;2018-04-20T14:05:25.829Z&quot;}}" data-hydrate="t"><div class="movie-container" data-reactroot=""><img class="movie-cover" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2516578307.webp"/><div class="movie-info"><h1>头号玩家 Ready Player One (2018)</h1><p>在2045年，现实世界衰退破败，人们沉迷于VR(虚拟现实)游戏“绿洲(OASIS)”的虚幻世界里寻求慰藉。马克·里朗斯饰演的“绿洲”的创始人临终前宣布，将亿万身家全部留给寻获他隐藏的彩蛋的游戏玩家，史上最大规模的寻宝冒险就此展开，由泰伊·谢里丹饰演的男主角韦德·沃兹(Wade Watts/Parzival)和数十亿竞争者踏上奇妙而又危机重重的旅途。</p><div style="overflow:hidden;position:relative"><style>
-        .react-stars-05583972660892924:before {
-          position: absolute;
-          overflow: hidden;
-          display: block;
-          z-index: 1;
-          top: 0; left: 0;
-          width: 50%;
-          content: attr(data-forhalf);
-          color: #ffd700;
-      }</style></div></div></div></div>
+    <div data-react-class="MovieItem" data-react-props="{&quot;movie&quot;:{&quot;id&quot;:1,&quot;cover_img&quot;:&quot;https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2516578307.webp&quot;,&quot;title&quot;:&quot;头号玩家 Ready Player One (2018)&quot;,&quot;desc&quot;:&quot;在2045年，现实世界衰退破败，人们沉迷于VR(虚拟现实)游戏“绿洲(OASIS)”的虚幻世界里寻求慰藉。马克·里朗斯饰演的“绿洲”的创始人临终前宣布，将亿万身家全部留给寻获他隐藏的彩蛋的游戏玩家，史上最大规模的寻宝冒险就此展开，由泰伊·谢里丹饰演的男主角韦德·沃兹(Wade Watts/Parzival)和数十亿竞争者踏上奇妙而又危机重重的旅途。&quot;,&quot;created_at&quot;:&quot;2018-04-20T14:05:25.829Z&quot;,&quot;updated_at&quot;:&quot;2018-04-20T14:05:25.829Z&quot;}}" data-hydrate="t"><div class="movie-container" data-reactroot=""><img class="movie-cover" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2516578307.webp"/><div class="movie-info"><h1>头号玩家 Ready Player One (2018)</h1><p>在2045年，现实世界衰退破败，人们沉迷于VR(虚拟现实)游戏“绿洲(OASIS)”的虚幻世界里寻求慰藉。马克·里朗斯饰演的“绿洲”的创始人临终前宣布，将亿万身家全部留给寻获他隐藏的彩蛋的游戏玩家，史上最大规模的寻宝冒险就此展开，由泰伊·谢里丹饰演的男主角韦德·沃兹(Wade Watts/Parzival)和数十亿竞争者踏上奇妙而又危机重重的旅途。</p></div></div></div>
 
       </body>
 
@@ -111,7 +101,7 @@
 
 所以，做 SSR 和不做 SSR 的区别之一是，做 SSR 时，因为 render() 方法首先会在服务端被执行一次，所以不能在 render() 方法中调用到任何浏览器相关的 API，比如 `window.location.href`，必须把它移到 componentDidMount() 中去调用。componentDidMount() 方法只会在浏览器端组件被加载后调用，在服务端不会被调用。
 
-但是，可以从上面的代码看到，用 react-rails 后，不管做不做 SSR，我们需要渲染的数据都是直接在服务端获得的，并没有在客户端去发 ajax 请求拿数据的逻辑，所以并没有前后端分离。在这里，我们仅仅是用 react component 去替代了原来的 html 模板，渲染 props 传过来的数据，相当于是一个 PureComponent，实现了 React 所宣称的它只是一个很薄的 view 层。
+但是，可以从上面的代码看到，用 react-rails 后，不管做不做 SSR，我们需要渲染的数据都是直接在服务端获得的，并没有在客户端去发 ajax 请求拿数据的逻辑，所以并没有前后端分离。在这里，我们仅仅是用 react component 去替代了原来的 html 模板，渲染 props 传过来的数据，实现了 React 所宣称的它只是一个很薄的 view 层。
 
 所以，借助 react-rails 后，我们的工作就简单多了，就是把一个个 html 模板替换成 react component，什么 redux，react-router，统统都没去用。
 
@@ -129,14 +119,14 @@
 
 所以我们就开始思考怎么来彻底解决这个痛 - 在 rails 中使用 npm 包。
 
-好消息是，在今天，这个方法并不难 (webpacker)，但在一年多前，我们刚开始使用 react-rails 的时候，那时候还是一个难点。react-rails 中的有一些讨论如何使用第三方库的 issue：
+好消息是，在今天，这个方法并不难 (借助 webpacker)，但在一年多前，我们刚开始使用 react-rails 的时候，那时候还是一个难点。react-rails 中的有一些讨论如何使用第三方库的 issue：
 
 - [How do you require react-modal in your app?](https://github.com/reactjs/react-rails/issues/510)
 - [How do you manage dependencies?](https://github.com/reactjs/react-rails/issues/135)
 
 有一些 workaround，比如使用 rails assets gem，或者将第三方库编译后的代码放到 app/assets/javascripts/vendor 目录下 ... 但都不是很完美的解决方案。[browserify-rails](https://github.com/browserify-rails/browserify-rails) 是最近才知道的，但有了 webpacker 后就没有研究了。
 
-几个月前 (好像是吧)，rails 发布了 [webpacker](https://github.com/rails/webpacker) gem，把前端的打包工具 webpack 整合进 rails，有了它，我们就可以方便地在 rails 中使用各种前端框架，react / vue / angular / stimulus ... 和使用 npm 包。
+[去年 rails 5.1 在发布时](https://ruby-china.org/topics/32374)，同时发布了一个叫 [webpacker](https://github.com/rails/webpacker) 的 gem，把前端的打包工具 webpack 整合进 rails，有了它，我们就可以方便地在 rails 中使用各种前端框架，react / vue / angular / stimulus ... 和使用 npm 包。
 
 新版本的 react-rails (2.4.4) 也可以很好地和 webpacker 配合使用，因此果断地将 react-rails 从 1.10 升级到 2.4.4，并引入 webpacker。
 
@@ -146,7 +136,7 @@
 
 升级改造完成后，`yarn install rc-slider`，改改样式，range slider 就搞定了，一个心头的痛总算是搞定了。
 
-总结就是，webpacker 支持我们在 rails 中使用 npm 包和 react，reac-rails 支持对 react 做 SSR。
+总结就是，webpacker 支持我们在 rails 中使用 npm 包和 react，react-rails 支持对 react 做 SSR。
 
 以上就是背景，接下来终于要进入主题，以下是我要讲的内容提纲。
 
@@ -205,11 +195,13 @@ SEO 是 search engine optimization 的缩写，意为搜索引擎优化，意思
 
 一般来说，内容型的网页需要关心 SEO，比如 blog 类，新闻类网站。而另外一些则可以完全不用考虑 SEO 的问题，尤其是需要登录访问的网站，比如后台管理，论坛，社交网站 ...
 
+另外，补充一下，还有一类网页，可能对 SEO 没有需求，但是也必须做 SSR。如果你做过将网页分享到 Facebook 的话，你会发现，Facebook 会通过它的 crawler 去爬取当前网页，并从 head 部分的 meta 标签中提取出要分享的内容，比如 url, title, description, image ... ([A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters#markup))
+
 ## CSR 的缺点
 
 主要有两个缺点，一是对 SEO 不友好，前面已经解释了。其二是首屏白屏的问题。
 
-我同样准备了一个 demo，先让大家大致对这个首屏白屏现象有个体会。假设我们服务端的程序特别慢，从数据库查询数据要很久，我们用 sleep 5s 来模拟这种情况，然后来对比一下访问 SSR 页面和 CSR 页面的感受，和所观察到的现象。
+我同样准备了一个 demo，先让大家大致对这个首屏白屏现象有个体会。假设我们服务端的程序性能很差，从数据库查询数据要很久，我们用 sleep 5s 来模拟这种情况，然后来对比一下访问 SSR 页面和 CSR 页面的感受，和所观察到的现象。
 
 ![](./art/blank_screen_ssr.gif)
 
@@ -644,13 +636,13 @@ body 里确实除了一个 js 文件外什么都没有。
       movie: PropTypes.object
     }
 
-ok，接下来就到了最关键的一步了，到目前为止，我们还没有在任何地方声明渲染 MovieItem 这个 component 呢。react-rails 提供了一个 `react_component` 的 view helper 方法来渲染一个 react 组件。
+OK，接下来就到了最关键的一步了，到目前为止，我们还没有在任何地方声明渲染 MovieItem 这个 component 呢。react-rails 提供了一个 `react_component` 的 view helper 方法来渲染一个 react 组件。
 
 因此，我们在 csr.html.erb 中加入这行代码。
 
     <%= react_compoent('movie_item', {movie: @movie}, {prerender: true}) >
 
-第一个参数是声明要渲染的组件名 (其实是组件所在的文件名)，第二个参数是此组件的 props，第三个是声明是否做 SSR，我们设置为 true。
+第一个参数是声明要渲染的组件名 (其实是组件所在的文件名，它会去找从这个文件中导出的 default 组件)，第二个参数是此组件的 props，第三个是声明是否做 SSR，我们设置为 true。
 
 我们前面说到，当 rails 执行到 `react_component` 方法，且 prerender 为 true 时，它会调用一个 JavaScript 的环境来去执行相应组件的 render() 方法，得到相应的 html 内容，插入在此处。
 
@@ -669,3 +661,5 @@ ok，接下来就到了最关键的一步了，到目前为止，我们还没有
 ## 总结
 
 借助 webpacker 和 react-rails，我们可以在不做前后端分离的情况下，方便地在 rails 中使用 react 来渲染 view，且支持 SSR，可以使用 npm 包。
+
+以上内容不能保证完全正确，仅是个人理解，如有描述得不对的地方，欢迎指正。
